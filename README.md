@@ -111,4 +111,4 @@ STR-A/
 ├── usuario.html
 
 
-[![Demostración del sistema STR-A][(https://img.youtube.com/vi/lwLgduCLkAY/0.jpg)](https://www.youtube.com/watch?v=lwLgduCLkAY)
+[![Demostración del sistema STR-A](https://img.youtube.com/vi/lwLgduCLkAY/0.jpg)](https://www.youtube.com/watch?v=lwLgduCLkAY)
