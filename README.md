@@ -109,7 +109,8 @@ STR-A/
 ├── info.html
 ├── panel_trazabilidad.html
 ├── README.md
-├── usuario.html```
+├── usuario.html
+```
 
 ###Vídeo Demostración
 [![Demostración del sistema STR-A](https://img.youtube.com/vi/lwLgduCLkAY/0.jpg)](https://www.youtube.com/watch?v=lwLgduCLkAY)
