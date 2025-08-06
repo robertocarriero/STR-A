@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Trazabilidad Aeronáutica</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/panel_trazabilidad.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar">
+        <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="usuario.html">Guía del Usuario</a></li>
+            <li><a href="convertidor.html">Generador de Hash</a></li>
+            <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+            <li><a href="glosario.html">Glosario</a></li> 
+            <li><a href="contacto.html">Contacto</a></li> 
+            
+        </ul>
+    </nav>
+  </header>
+
+<main class="page-content dashboard">
+      <!--<div class="global-site-logo-container">
+        <a href="index.html">
+            <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+        </a>
+    </div>-->
+        <section class="dashboard-header">
+             <a href="index.html">
+               <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+             </a>
+            <h2>Sistema de Trazabilidad de Repuestos Aeronáuticos</h2>
+            <p>Aquí puedes interactuar con el sistema de trazabilidad de componentes aeronáuticos basado en blockchain. Conecta tu billetera para empezar.</p>
+            <div class="wallet-status">
+                <p>Estado de la Conexión: <span id="connectionStatus" class="status-disconnected">Desconectado</span></p>
+                <p>Cuenta Conectada: <span id="connectedAccount">N/A</span></p>
+                <button id="connectWalletButton" class="connect-button">Conectar Billetera (MetaMask)</button>
+            </div>
+            <div class="user-role">
+                <p><strong>Tu Rol:</strong> <span id="userRole"><strong>Cargando...</strong></span></p>
+            </div>
+        </section>
+
+        <div class="tab-container">
+            <button class="tab-button active" onclick="openTab(event, 'registerPart')">Registrar Nueva Pieza</button>
+            <button class="tab-button" onclick="openTab(event, 'queryPart')">Consultar Pieza</button>
+            <button class="tab-button" onclick="openTab(event, 'updateState')">Actualizar Estado</button>
+            <button class="tab-button" onclick="openTab(event, 'transferOwnership')">Transferir Propiedad</button>
+            <button class="tab-button" onclick="openTab(event, 'adminRoles')">Admin. de Roles</button>
+        </div>
+
+        <div id="registerPart" class="tab-content active">
+            <h3>Registrar Nueva Pieza (Solo Fabricantes)</h3>
+            <p>Utiliza este formulario para dar de alta una nueva pieza aeronáutica en el sistema de trazabilidad.</p>
+            <form id="registerPartForm" class="data-form">
+                <div class="form-group">
+                    <label for="regSerialNumber">Número de Serie (S/N):</label>
+                    <input type="text" id="regSerialNumber" required placeholder="Ej: SN123456789">
+                </div>
+                <div class="form-group">
+                    <label for="regPartNumber">Número de Parte (P/N):</label>
+                    <input type="text" id="regPartNumber" required placeholder="Ej: PN-ABC-001">
+                </div>
+                <div class="form-group">
+                    <label for="regManufacturerName">Nombre del Fabricante:</label>
+                    <input type="text" id="regManufacturerName" required placeholder="Ej: AeroFabric S.A.">
+                </div>
+                <div class="form-group">
+                    <label for="regInitialOwnerAddress">Dirección del Propietario Inicial (0x...):</label>
+                    <input type="text" id="regInitialOwnerAddress" required placeholder="Ej: 0xAbcDef123...">
+                </div>
+                <div class="form-group">
+                    <label for="regInitialDocHash">Hash del Documento Inicial (SHA-256):</label>
+                    <input type="text" id="regInitialDocHash" required placeholder="Ej: 0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890">
+                    <small>Usa la página "Generar Hash" para obtenerlo.</small>
+                </div>
+                <button type="submit" class="submit-button">Registrar Pieza</button>
+            </form>
+            <div id="registerPartResult" class="result-message"></div>
+        </div>
+
+        <div id="queryPart" class="tab-content">
+            <h3>Consultar Detalles y Historial de Pieza</h3>
+            <p>Ingresa el Número de Serie de la pieza para ver sus datos principales y su historial completo.</p>
+            <form id="queryPartForm" class="data-form">
+                <div class="form-group">
+                    <label for="querySerialNumber">Número de Serie (S/N):</label>
+                    <input type="text" id="querySerialNumber" required placeholder="Ej: SN123456789">
+                </div>
+                <button type="submit" class="submit-button">Consultar Pieza</button>
+            </form>
+            <div id="queryPartResult" class="result-message"></div>
+            
+            <div id="partDetailsDisplay" class="details-display" style="display: none;">
+                <h4>Detalles de la Pieza:</h4>
+                <p><strong>Número de Parte:</strong> <span id="displayPartNumber"></span></p>
+                <p><strong>Fabricante:</strong> <span id="displayManufacturerName"></span></p>
+                <p><strong>Propietario Actual:</strong> <span id="displayOwner"></span></p>
+                <p><strong>Registrada:</strong> <span id="displayIsRegistered"></span></p>
+            </div>
+
+            <div id="partHistoryDisplay" class="history-display" style="display: none;">
+                <h4>Historial de Eventos:</h4>
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Estado</th>
+                            <th>Ubicación</th>
+                            <th>Fecha/Hora</th>
+                            <th>Realizado Por</th>
+                            <th>Docs Asociados</th>
+                            <th>Datos Adicionales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <p id="noHistoryMessage" style="display: none;">No hay historial de eventos para esta pieza.</p>
+            </div>
+        </div>
+
+        <div id="updateState" class="tab-content">
+            <h3>Actualizar Estado de Pieza (Solo MROs y Operadores)</h3>
+            <p>Registra un nuevo evento en el historial de una pieza (instalación, reparación, remoción, etc.).</p>
+            <form id="updateStateForm" class="data-form">
+                <div class="form-group">
+                    <label for="updSerialNumber">Número de Serie (S/N):</label>
+                    <input type="text" id="updSerialNumber" required placeholder="Ej: SN123456789">
+                </div>
+                <div class="form-group">
+                    <label for="updNewStatus">Nuevo Estado:</label>
+                    <input type="text" id="updNewStatus" required placeholder="Ej: INSTALADO_EN_AVION_LV-ABC">
+                </div>
+                <div class="form-group">
+                    <label for="updLocation">Ubicación:</label>
+                    <input type="text" id="updLocation" required placeholder="Ej: LV-ABC (Motor 1)">
+                </div>
+                <div class="form-group">
+                    <label for="updDocHashes">Hashes de Documentos de Soporte (separados por coma si hay varios):</label>
+                    <textarea id="updDocHashes" rows="3" placeholder="Ej: 0xhash1, 0xhash2, ..."></textarea>
+                    <small>Copia los hashes generados en la página "Generar Hash".</small>
+                </div>
+                <div class="form-group">
+                    <label for="updAdditionalData">Datos Adicionales (ej. Horas/Ciclos):</label>
+                    <input type="text" id="updAdditionalData" placeholder="Ej: Ciclos: 1500, Horas: 2340.5">
+                </div>
+                <button type="submit" class="submit-button">Actualizar Estado</button>
+            </form>
+            <div id="updateStateResult" class="result-message"></div>
+        </div>
+
+        <div id="transferOwnership" class="tab-content">
+            <h3>Transferir Propiedad de Pieza (Solo Propietario Actual)</h3>
+            <p>Transfiere la titularidad de una pieza a una nueva dirección.</p>
+            <form id="transferOwnershipForm" class="data-form">
+                <div class="form-group">
+                    <label for="transSerialNumber">Número de Serie (S/N):</label>
+                    <input type="text" id="transSerialNumber" required placeholder="Ej: SN123456789">
+                </div>
+                <div class="form-group">
+                    <label for="transNewOwnerAddress">Nueva Dirección del Propietario (0x...):</label>
+                    <input type="text" id="transNewOwnerAddress" required placeholder="Ej: 0xAbcDef123...">
+                </div>
+                <button type="submit" class="submit-button">Transferir Propiedad</button>
+            </form>
+            <div id="transferOwnershipResult" class="result-message"></div>
+        </div>
+
+        <div id="adminRoles" class="tab-content">
+            <h3>Administración de Roles (Solo Administradores)</h3>
+            <p>Concede o revoca roles a otras direcciones en el sistema de trazabilidad.</p>
+            
+            <h4>Conceder Rol</h4>
+            <form id="grantRoleForm" class="data-form compact-form">
+                <div class="form-group">
+                    <label for="grantAccountAddress">Dirección de la Cuenta (0x...):</label>
+                    <input type="text" id="grantAccountAddress" required placeholder="Ej: 0xAbcDef123...">
+                </div>
+                <div class="form-group">
+                    <label for="grantRoleSelect">Rol a Conceder:</label>
+                    <select id="grantRoleSelect" required>
+                        <option value="">Seleccionar Rol</option>
+                        <option value="MANUFACTURER_ROLE">Fabricante</option>
+                        <option value="MRO_ROLE">MRO (Mantenimiento, Reparación, Revisión)</option>
+                        <option value="OPERATOR_ROLE">Operador</option>
+                        <option value="ADMIN_ROLE">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Conceder Rol</button>
+            </form>
+            <div id="grantRoleResult" class="result-message"></div>
+
+            <h4 style="margin-top: 40px;">Revocar Rol</h4>
+            <form id="revokeRoleForm" class="data-form compact-form">
+                <div class="form-group">
+                    <label for="revokeAccountAddress">Dirección de la Cuenta (0x...):</label>
+                    <input type="text" id="revokeAccountAddress" required placeholder="Ej: 0xAbcDef123...">
+                </div>
+                <div class="form-group">
+                    <label for="revokeRoleSelect">Rol a Revocar:</label>
+                    <select id="revokeRoleSelect" required>
+                        <option value="">Seleccionar Rol</option>
+                        <option value="MANUFACTURER_ROLE">Fabricante</option>
+                        <option value="MRO_ROLE">MRO (Mantenimiento, Reparación, Revisión)</option>
+                        <option value="OPERATOR_ROLE">Operador</option>
+                        <option value="ADMIN_ROLE">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button remove-button">Revocar Rol</button>
+            </form>
+            <div id="revokeRoleResult" class="result-message"></div>
+        </div>
+
+</main>
+
+    <footer>
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+      
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="./scripts//panel_trazabilidad.js"></script>
+</body>
+</html>

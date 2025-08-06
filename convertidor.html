@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Generar Hash de Documento</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/convertidor.css"> 
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="usuario.html">Guía del Usuario</a></li>
+            <li><a href="convertidor.html">Generador de Hash</a></li>
+            <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+            <li><a href="glosario.html">Glosario</a></li> 
+            <li><a href="contacto.html">Contacto</a></li> 
+            
+        </ul>
+    </nav>
+    </header>
+    
+    <div>
+        <div class="hero-text">
+            <h1>Generador de Hash para Documentos Aeronáuticos</h1>
+            <p>Convierta sus formularios DA-8130-3 en un hash único para la trazabilidad.</p>
+        </div>
+    </div>
+
+    <main class="page-content">
+        <a href="index.html">
+                <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+        </a>
+            <h2>Sistema de Trazabilidad de Repuestos Aeronáuticos</h2>
+        <section class="hash-generator-section">
+            <h2>Paso 1: Seleccione su Documento</h2>
+            <p>Elija el archivo del formulario DA-8130-3 (o cualquier otro documento) desde su equipo.</p>
+            <div class="file-input-container">
+                <input type="file" id="documentUpload" accept=".pdf,.doc,.docx,.xls,.xlsx,.txt" class="file-input">
+                <label for="documentUpload" class="custom-file-upload">
+                    Seleccionar Archivo
+                </label>
+                <span id="fileName" class="file-name">Ningún archivo seleccionado</span>
+            </div>
+            
+            <button id="generateHashButton" class="generate-button">Generar Hash</button>
+
+            <div class="hash-result-container">
+                <h2>Paso 2: Hash Generado</h2>
+                <p>Este es el hash único de su documento. Cópielo para incorporarlo al sistema de trazabilidad.</p>
+                <div class="hash-display-area">
+                    <span id="generatedHash" class="hash-value">Esperando documento...</span>
+                    <button id="copyHashButton" class="copy-button" title="Copiar al portapapeles">📋</button>
+                </div>
+            </div>
+
+            <div class="hash-explanation-box">
+                <h3>¿Para qué sirve este Hash? ¡Es la "Huella Digital" de tu Documento!</h3>
+                <p>El hash generado es la **"huella digital" única** de tu documento. Cuando tu Smart Contract (contrato inteligente) en la blockchain te pide un hash en un registro, lo que está buscando es precisamente esta cadena hexadecimal.</p>
+                <ul>
+                    <li><p><strong>Integridad del Documento:</strong> Al almacenar este hash en tu Smart Contract, no estás guardando el PDF completo en la blockchain (lo cual sería muy costoso e impráctico). En su lugar, guardas un **resumen criptográfico inmutable** de ese documento.</p></li>
+                    <li><p><strong>Verificación de Autenticidad:</strong> Si en el futuro alguien tiene una copia de ese mismo formulario DA-8130-3, puede pasarlo por esta misma herramienta. Si el hash que obtiene **coincide exactamente** con el hash registrado en tu Smart Contract, tienes una prueba criptográfica de que ese documento es la **versión original e inalterada** que fue "certificada" en la blockchain. Cualquier mínima modificación en el PDF generaría un hash completamente diferente.</p></li>
+                    <li><p><strong>Privacidad:</strong> El documento PDF en sí nunca sale de tu computadora (ni se sube a ningún servidor). Solo la huella digital (el hash) se registra en la blockchain, manteniendo la privacidad del contenido original.</p></li>
+                </ul>
+                <p>¡Estás utilizando la blockchain de una manera muy efectiva para garantizar la **trazabilidad** y la **integridad** de tus registros aeronáuticos!</p>
+            </div>
+            <div class="important-note">
+                <h3>Nota Importante:</h3>
+                <p>El cálculo del hash se realiza directamente en su navegador, y el documento nunca es enviado a ningún servidor. Esto asegura la privacidad y seguridad de su información.</p>
+                <p>Este hash es una huella digital única e inmutable de su documento. Cualquier mínima modificación en el archivo generará un hash completamente diferente.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./scripts/convertidor.js"></script>
+</body>
+</html>

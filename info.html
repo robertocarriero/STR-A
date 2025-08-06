@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información STR-A</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/info.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="usuario.html">Guía del Usuario</a></li>
+            <li><a href="convertidor.html">Generador de Hash</a></li>
+            <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+            <li><a href="glosario.html">Glosario</a></li> 
+            <li><a href="contacto.html">Contacto</a></li> 
+            
+        </ul>
+    </nav>
+    </header>
+
+    <main class="page-content">
+        
+        <section class="section-text">
+            <a href="index.html">
+                <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+               </a>
+            <h2>La Trazabilidad en el Sector Aeronáutico: Un Imperativo de Seguridad y Eficiencia</h2>
+            <p>La <strong>trazabilidad</strong> en el sector aeronáutico no es solo un concepto logístico, sino un pilar fundamental e irrenunciable para la seguridad operacional, la aeronavegabilidad continua y el cumplimiento regulatorio estricto. Se define como la capacidad exhaustiva de reconstruir la historia, identificar la aplicación y determinar la ubicación actual de cualquier componente aeronáutico en cualquier momento de su ciclo de vida. Esto abarca desde la adquisición de materias primas y su manufactura inicial, pasando por su instalación en una aeronave, cada evento de mantenimiento, reparación y revisión (MRO), hasta su eventual remoción del servicio, reacondicionamiento o desguace.</p>
+            <p>Este seguimiento minucioso es indispensable para garantizar que solo las partes genuinas, que cumplen con las certificaciones de calidad más rigurosas y cuyo historial de uso y mantenimiento es perfectamente conocido, sean incorporadas en aeronaves. La carencia de una trazabilidad impecable introduce riesgos críticos, como la instalación de piezas falsificadas, defectuosas, o aquellas cuyo historial de servicio es incompleto o sospechoso, lo que podría tener consecuencias catastróficas para la seguridad de los vuelos.</p>
+
+            <h3>Desafíos de los Sistemas de Trazabilidad Tradicionales en la Aviación:</h3>
+            <p>A pesar de su criticidad, los sistemas de trazabilidad convencionales enfrentan múltiples desafíos inherentes que limitan su eficacia y robustez:</p>
+            <ul>
+                <li><strong>Susceptibilidad a la Manipulación y Fraude:</strong>
+                    <p>Los registros basados en papel son vulnerables a la pérdida, el daño físico o la alteración malintencionada. Las bases de datos centralizadas, aunque digitales, son propensas a ciberataques, errores humanos o manipulaciones internas, comprometiendo la integridad y la confianza en el historial de las piezas. La falta de un mecanismo de verificación independiente abre la puerta a la falsificación de documentos y, consecuentemente, a la introducción de repuestos no autorizados.</p>
+                </li>
+                <li><strong>Fragmentación y Desconexión de la Información:</strong>
+                    <p>La compleja cadena de suministro aeronáutica involucra una multitud de actores: fabricantes de piezas originales (OEM), proveedores de nivel 1, 2 y 3, distribuidores autorizados, organizaciones de mantenimiento y reparación (OMA/MRO), operadores de aeronaves (aerolíneas) y autoridades reguladoras. Cada entidad suele operar con sus propios sistemas de registro de inventario y mantenimiento, creando silos de información. Esto dificulta enormemente la obtención de una visión holística, en tiempo real y verificable del historial completo de una pieza.</p>
+                </li>
+                <li><strong>Ineficiencia Operativa y Carga Burocrática:</strong>
+                    <p>El manejo, archivo y verificación de volúmenes masivos de documentación física (formularios 8130-3, certificados de conformidad, órdenes de trabajo, etc.) son procesos extremadamente manuales, lentos y costosos. Esto no solo incrementa los costos operativos, sino que también introduce cuellos de botella que pueden retrasar las operaciones de mantenimiento y la puesta en servicio de las aeronaves.</p>
+                </li>
+                <li><strong>Riesgo Persistente de Piezas Falsificadas (Counterfeit Parts):</strong>
+                    <p>La ausencia de un sistema de registro unificado, inmutable y criptográficamente seguro facilita enormemente la infiltración de componentes falsificados o no autorizados en la cadena de suministro. Estas piezas, al carecer de un historial legítimo y a menudo de los estándares de calidad requeridos, representan un riesgo inaceptable para la seguridad de vuelo y la integridad de las aeronaves.</p>
+                </li>
+                <li><strong>Complejidad y Tiempo en Auditorías y Cumplimiento:</strong>
+                    <p>La recopilación, validación y conciliación de datos para auditorías de cumplimiento normativo (tanto internas como de las autoridades como la ANAC) son tareas laboriosas y que consumen mucho tiempo. La heterogeneidad y la dispersión de los registros requieren una inversión significativa de recursos y tiempo para asegurar la conformidad.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-text">
+            <h2>Proposición de Solución: El Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A) Basado en Blockchain</h2>
+            <p>Para abordar de manera integral los desafíos inherentes a la trazabilidad en el sector aeronáutico, proponemos el desarrollo e implementación del Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A). Esta solución se concibe como una <strong>Aplicación Descentralizada (DApp)</strong> construida sobre la sólida y segura tecnología de <strong>blockchain de Ethereum</strong>.</p>
+
+            <h3>Entendiendo la Tecnología Blockchain: Más Allá de las Criptomonedas</h3>
+            <p>Una <strong>blockchain</strong> puede ser conceptualizada como un libro de contabilidad digital, distribuido y sumamente seguro, que registra transacciones de manera inmutable y transparente a través de una red global de computadoras (nodos). Cada "bloque" en esta cadena contiene un conjunto de transacciones validadas y está enlazado criptográficamente al bloque precedente, creando así una "cadena" de datos secuencial y verificable que no puede ser alterada una vez registrada.</p>
+            <p>Las propiedades clave que hacen de blockchain una tecnología disruptiva para la trazabilidad son:</p>
+            <ul>
+                <li><strong>Descentralización: Una Fuente de Verdad Distribuida</strong>
+                    <p>A diferencia de los sistemas tradicionales, donde una única entidad (un servidor central o una empresa) controla y verifica los datos, en una blockchain no existe una autoridad central única. La validación y el registro de la información son consensuados y replicados por múltiples participantes independientes de la red. Esto elimina los "puntos únicos de fallo" (single points of failure) y la necesidad de confiar ciegamente en un tercero para la custodia de los datos. La información se vuelve más resistente a la censura, la manipulación o la caída de un servidor.</p>
+                </li>
+                <li><strong>Inmutabilidad: Historial Permanente y a Prueba de Manipulaciones</strong>
+                    <p>Una vez que una transacción o registro (como el historial de una pieza) es validado por la red y añadido a un bloque en la blockchain, se vuelve criptográficamente imposible de alterar, borrar o falsificar sin invalidar toda la cadena subsiguiente. Cualquier intento de modificación sería detectado instantáneamente por la red. Esta propiedad garantiza la integridad y autenticidad del historial de cada repuesto a lo largo de su vida útil, proporcionando una "fuente de verdad" inquebrantable.</p>
+                </li>
+                <li><strong>Transparencia Controlada y Auditabilidad: Visibilidad Selectiva y Verificable</strong>
+                    <p>Mientras que en blockchains públicas todas las transacciones son visibles para cualquiera, en contextos empresariales como el STR-A, se puede implementar una "blockchain permisionada" o un diseño con "privacidad por diseño". Esto permite que las transacciones y los datos relevantes sean visibles y auditables solo para los participantes autorizados de la red (fabricantes, MRO, operadores, ANAC), equilibrando la transparencia necesaria para la confianza con la privacidad requerida para la información sensible del negocio. Cada evento deja una huella digital que puede ser auditada en cualquier momento.</p>
+                </li>
+                <li><strong>Seguridad Criptográfica Avanzada: Resistencia a Ataques y Falsificaciones</strong>
+                    <p>La tecnología blockchain utiliza algoritmos criptográficos robustos (como hashing SHA-256 y criptografía de clave pública/privada) para asegurar la autenticación de las transacciones, la identidad de los participantes y la integridad de la cadena de bloques. Esto significa que cada registro está "firmado" digitalmente por la entidad que lo realizó, haciendo prácticamente imposible la falsificación de identidad o de datos. La cadena de bloques se protege a sí misma.</p>
+                </li>
+                <li><strong>Contratos Inteligentes (Smart Contracts): La Lógica de Negocio Auto-Ejecutable</strong>
+                    <p>Los contratos inteligentes son programas informáticos auto-ejecutables que se almacenan y ejecutan directamente en la blockchain (en nuestro caso, en Ethereum). Codifican los términos de un acuerdo o las reglas de negocio, y se ejecutan automáticamente y de forma inmutable cuando se cumplen condiciones predefinidas. Esto permite la automatización de procesos complejos (como la transferencia de propiedad de una pieza o el registro de un evento de mantenimiento) sin necesidad de intermediarios. Son la "lógica" que impulsa el STR-A, asegurando que las reglas de trazabilidad se apliquen de manera consistente y sin errores.</p>
+                </li>
+            </ul>
+            <p><strong>Ethereum</strong> es la plataforma líder para el desarrollo y despliegue de estos contratos inteligentes, gracias a su robustez, seguridad y amplia comunidad de desarrolladores.</p>
+        </section>
+
+        <section class="section-text">
+            <h2>Beneficios Estratégicos y Cumplimiento Normativo del STR-A Basado en Blockchain</h2>
+            <p>La implementación del Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A) sobre una infraestructura blockchain como Ethereum ofrecerá beneficios sustanciales que transformarán la gestión de componentes en la aviación argentina, garantizando al mismo tiempo un cumplimiento robusto de las Regulaciones Argentinas de Aviación Civil (RAAC):</p>
+            <ul>
+                <li><strong>Integridad de Datos Insuperable y Confianza Absoluta:</strong>
+                    <ul>
+                        <li><strong>RAAC 43.305 (registros de mantenimiento), 43.110 (piezas y materiales), 145.630 (registros de organización de mantenimiento):</strong> La inmutabilidad de la blockchain garantiza que el historial de cada repuesto sea un registro auditable, permanente y a prueba de cualquier manipulación o falsificación. Cada entrada (desde la fabricación hasta el desguace) es un hecho criptográficamente verificado y sellado en el tiempo, eliminando cualquier duda sobre su autenticidad.</li>
+                        <li><strong>Eliminación de Discrepancias:</strong> Al operar sobre una única fuente de verdad distribuida, se terminan las discrepancias entre los registros de diferentes entidades (fabricantes, distribuidores, MRO, operadores). Todos los actores autorizados ven la misma información actualizada en tiempo real.</li>
+                    </ul>
+                </li>
+                <li><strong>Transparencia Consolidada y Colaboración Optimizada:</strong>
+                    <ul>
+                        <li><strong>RAAC 145.001 (general):</strong> Provee una fuente única y autorizada de verdad compartida entre todos los participantes autorizados de la cadena de suministro aeronáutica, incluyendo la Autoridad de Aviación Civil (ANAC). Esto mejora drásticamente la colaboración, la comunicación y reduce la incertidumbre sobre la autenticidad y el historial de las piezas, facilitando la toma de decisiones y la coordinación entre las partes.</li>
+                        <li><strong>Visibilidad End-to-End:</strong> Permite a las partes interesadas rastrear el ciclo de vida completo de un componente con un nivel de detalle sin precedentes, desde su origen hasta su estado actual.</li>
+                    </ul>
+                </li>
+                <li><strong>Combate Decisivo a la Falsificación de Piezas:</strong>
+                    <ul>
+                        <li><strong>RAAC 43.110 (piezas y materiales):</strong> Al registrar el origen certificado de cada parte (vinculado a su Formulario 8130-3 o certificado de conformidad digitalizado) directamente desde la manufactura y de forma inmutable en la blockchain, el STR-A crea un rastro digital inquebrantable. Cualquier pieza que no posea un registro blockchain validado y verificable sería inmediatamente identificada como no auténtica o no autorizada, minimizando de forma drástica la introducción de componentes peligrosos o fraudulentos en la cadena de suministro.</li>
+                        <li><strong>Verificación Instantánea:</strong> La autenticidad de una pieza puede ser verificada en segundos escaneando un código QR o introduciendo un número de serie, comparando el dato con el registro inmutable en la blockchain.</li>
+                    </ul>
+                </li>
+                <li><strong>Eficiencia Operacional y Reducción Significativa de Costos:</strong>
+                    <ul>
+                        <li><strong>Automatización de Registros:</strong> La interacción con los contratos inteligentes automatiza gran parte del proceso de registro de trazabilidad, desde la creación de una pieza hasta las actualizaciones de su estado y cambios de propietario. Esto reduce drásticamente los errores manuales, el papeleo y el tiempo administrativo.</li>
+                        <li><strong>Auditorías Optimizadas (RAAC 43.305, 145.630):</strong> La ANAC, los equipos de calidad de las organizaciones y los auditores externos podrán acceder a historiales completos, cronológicos y criptográficamente verificables en cuestión de segundos. Esto simplifica, acelera y hace más eficientes los procesos de auditoría y cumplimiento, liberando recursos valiosos.</li>
+                        <li><strong>Trazabilidad Just-in-Time:</strong> La capacidad de identificar rápidamente el paradero, el estado actual y el historial completo de cualquier repuesto optimiza la gestión de inventario, la planificación de mantenimiento y la respuesta inmediata a directivas de aeronavegabilidad (ADs) o boletines de servicio (SBs).</li>
+                    </ul>
+                </li>
+                <li><strong>Gestión Proactiva de Componentes de Vida Limitada (LLP):</strong>
+                    <ul>
+                        <li><strong>RAAC 43.305 (a)(3)(v):</strong> Los contratos inteligentes pueden ser programados para monitorear automáticamente los límites operacionales (horas, ciclos, calendario) de las Piezas de Vida Limitada (LLP). El sistema podría generar alertas y notificaciones automáticas a las partes relevantes cuando una LLP se acerca a sus límites de vida útil, garantizando su remoción y reemplazo oportuno y conforme a la normativa, previniendo fallos críticos y asegurando el cumplimiento.</li>
+                    </ul>
+                </li>
+                <li><strong>Innovación y Liderazgo en el Sector:</strong>
+                    <p>La adopción de tecnología blockchain posiciona al sector aeronáutico argentino a la vanguardia de la innovación, estableciendo nuevos estándares de seguridad, eficiencia y confianza en la cadena de suministro global.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-text final-paragraph">
+            <p>En resumen, el desarrollo de un Sistema de Trazabilidad de Repuestos Aeronáuticos basado en blockchain representa una evolución crítica y necesaria para la seguridad y eficiencia del sector de la aviación en Argentina. Al aprovechar las propiedades inherentes de inmutabilidad, transparencia y la capacidad de automatización que ofrecen los contratos inteligentes de Ethereum, el STR-A no solo asegura un cumplimiento superior y más eficiente de las Regulaciones Argentinas de Aviación Civil (RAAC), sino que también introduce un nivel sin precedentes de confianza mutua, eficiencia operativa y una resistencia robusta contra la falsificación y el fraude. Es un paso estratégico hacia un futuro más seguro y tecnológicamente avanzado para la aviación.</p>
+        </section>
+    </main>
+
+    <footer class="info-footer">
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./scripts/info.js"></script>
+</body>
+</html>

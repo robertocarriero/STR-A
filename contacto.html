@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - STR-A</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/contacto.css"> </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <ul id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="usuario.html">Guía del Usuario</a></li>
+                <li><a href="convertidor.html">Generador de Hash</a></li>
+                <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+                <li><a href="glosario.html">Glosario</a></li> 
+                <li><a href="contacto.html">Contacto</a></li> 
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="contact-section">
+            <a href="index.html">
+            <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+            </a>
+            <h2 class="stra">Sistema de Trazabilidad de Repuestos Aeronáuticos</h2>
+        <h2>Contáctanos</h2>
+        <p class="intro-text">¿Tienes alguna pregunta, sugerencia o necesitas más información sobre el Sistema de Trazabilidad de Repuestos Aeronáuticos? Por favor, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.</p>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkdglbr" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Ingresa tu nombre">
+                    <div class="error-message" id="nombre-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="nombre@ejemplo.com">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Tu Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="7" required aria-required="true" placeholder="Escribe aquí tu consulta o comentario..."></textarea>
+                    <div class="error-message" id="mensaje-error"></div>
+                </div>
+                
+                <button type="submit" id="submitBtn">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="./scripts/contacto.js"></script> <script src="./scripts/style.js"></script> 
+</body>
+</html>

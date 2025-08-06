@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Usuario STR-A</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/usuario.css"> 
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="usuario.html">Guía del Usuario</a></li>
+            <li><a href="convertidor.html">Generador de Hash</a></li>
+            <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+            <li><a href="glosario.html">Glosario</a></li> 
+            <li><a href="contacto.html">Contacto</a></li> 
+        </ul>
+    </nav>
+    </header>
+
+    <main class="page-content">
+        <a href="index.html">
+                <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+        </a>
+            <h2 class="stra">Sistema de Trazabilidad de Repuestos Aeronáuticos</h2>
+        <section class="guide-section">
+            <div class="text-content">
+                <h2>1. ¿Qué es este sistema y por qué es diferente? (La explicación simple)</h2>
+                <p>Imagina un libro de registro digital o bitácora para cada componente aeronáutico. Ahora, imagina que este libro tiene características especiales:</p>
+                <ul>
+                    <li><strong>Es Inalterable:</strong> Una vez que se escribe una entrada (como una instalación o una reparación), no se puede borrar ni modificar. Solo se pueden añadir nuevas entradas.</li>
+                    <li><strong>Es Compartido y Sincronizado:</strong> Todos los actores autorizados (Fabricantes, Talleres MRO, Aerolíneas) ven la misma versión del historial de la pieza, en tiempo real. Se acabaron las discrepancias entre lo que dice el fabricante y lo que tiene registrado la aerolínea.</li>
+                    <li><strong>Es 100% Verificable:</strong> Cada registro está "firmado" digitalmente por la empresa que lo realizó. Es como una firma notariada, imposible de falsificar, que demuestra quién hizo qué y cuándo.</li>
+                </ul>
+                <p>Esta tecnología se llama blockchain. No necesitas entender los detalles técnicos, solo su beneficio principal: crea una única fuente de verdad, segura y transparente, para la trazabilidad de cada componente.</p>
+            </div>
+            <div class="image-slider" id="slider1">
+                <div class="slides">
+                    <img src="./imag/11.png" alt="Explicación simple del sistema">
+                    <img src="./imag/12.png" alt="verificacion">
+                    <img src="./imag/13.png" alt="verificacion">
+                    <img src="./imag/14.png" alt="verificacion">
+                    <img src="./imag/15.png" alt="verificacion">
+                    <img src="./imag/16.png" alt="verificacion">
+                    <img src="./imag/17.png" alt="verificacion">
+                    <img src="./imag/blockchain01.png" alt="Explicación simple del sistema">
+                    <img src="./imag/blockchain02.png" alt="Libro de registro digital">
+                    <img src="./imag/blockchain03.png" alt="Beneficios de Blockchain">
+                    <img src="./imag/blockchain04.png" alt="Libro de registro digital">
+                </div>
+                <button class="prev" onclick="plusSlides(1, 'slider1', -1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1, 'slider1', 1)">&#10095;</button>
+            </div>
+        </section>
+        <section class="guide-section">
+            <div class="text-content">
+                <h2>2. Primeros Pasos: Tu Identidad Digital Segura (La Wallet)</h2>
+                <p>Para interactuar con el Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A) y firmar digitalmente cada acción (como registrar una nueva pieza o actualizar su estado), tu empresa necesita una "Identidad Digital". En el mundo de blockchain, esta identidad se gestiona a través de una <strong>Billetera Digital</strong> o "Wallet".</p>
+                <p>Piensa en tu wallet como una combinación de:</p>
+                <ul>
+                    <li><strong>Tu Usuario:</strong> Una dirección pública (ej. `0xABCD...1234`) que es como el CUIT o DNI de tu empresa en la blockchain, visible para todos.</li>
+                    <li><strong>Tu Contraseña Ultra-Segura:</strong> Una "clave privada" que nunca debes compartir. Es lo que te permite "firmar" transacciones y demostrar que eres el legítimo propietario de tu identidad.</li>
+                </ul>
+                <p>En el STR-A, utilizamos <strong>MetaMask</strong>, una de las billeteras digitales más populares y seguras, que funciona como una extensión en tu navegador web (Chrome, Firefox, Brave, Edge).</p>
+
+                <h3>2.1. Instalación y Creación de tu Billetera MetaMask</h3>
+                <p>Si aún no tienes MetaMask, aquí te guiamos para instalarla y configurar tu primera cuenta:</p>
+                <ol>
+                    <li><strong>Descarga MetaMask:</strong> Visita el sitio web oficial de MetaMask (<a href="https://metamask.io/download/" target="_blank">metamask.io/download/</a>) y haz clic en "Install MetaMask for [Tu Navegador]". Se descargará e instalará como una extensión.</li>
+                    <li><strong>Fija la Extensión:</strong> Una vez instalada, haz clic en el icono de "piezas de rompecabezas" (Extensiones) en la barra de herramientas de tu navegador y luego en el icono de "pin" junto a MetaMask para que siempre esté visible.</li>
+                    <li><strong>Crea una Nueva Billetera:</strong>
+                        <ul>
+                            <li>Al abrir MetaMask por primera vez, haz clic en <strong>"Crear una cartera nueva"</strong>.</li>
+                            <li>Acepta los términos y condiciones.</li>
+                            <li><strong>Crea una Contraseña Fuerte:</strong> Esta contraseña es para desbloquear MetaMask en tu navegador. Recuerda que no es tu clave privada.</li>
+                            <li><strong>¡MUY IMPORTANTE! Guarda tu Frase Secreta de Recuperación:</strong> Se te mostrará una serie de 12 (o 24) palabras. Esta es tu "llave maestra". Escríbela en un papel (¡no la guardes digitalmente en tu computadora ni la compartas con nadie!) y guárdala en un lugar seguro. Si pierdes tu computadora o se daña, esta frase es la única forma de recuperar el acceso a tu identidad digital y a todas las acciones que has registrado.</li>
+                            <li>Confirma tu frase de recuperación.</li>
+                        </ul>
+                    </li>
+                    <li><strong>¡Listo!</strong> Ya tienes tu billetera MetaMask configurada y estás listo para conectar tu identidad al STR-A.</li>
+                </ol>
+            </div>
+            <div class="image-slider" id="slider2">
+                <div class="slides">
+                    <img src="./imag/meta01 (1).png" alt="Paso a paso para crear una cuenta en MetaMask">
+                    <img src="./imag/meta01 (2).png" alt="Identidad Digital">
+                    <img src="./imag/meta01 (3).png" alt="Creación de Wallet">
+                    <img src="./imag/meta01 (4).png" alt="Asignación de Roles">
+                    <img src="./imag/meta01 (5).png" alt="Identidad Digital">
+                    <img src="./imag/meta1.jpg" alt="Paso a paso de instalación de MetaMask">
+                    <img src="./imag/wallet2.png" alt="Asignación de Roles">
+                    <img src="./imag/wallet3.png" alt="Asignación de Roles">
+                </div>
+                <button class="prev" onclick="plusSlides(2, 'slider2', -1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(2, 'slider2', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="text-content">
+                <h3>2.2. Conectando tu Identidad Digital al STR-A y Asignación de Rol</h3>
+                <p>Una vez que tengas tu billetera MetaMask configurada, el siguiente paso es conectar el STR-A a tu identidad y que el administrador te asigne un rol:</p>
+                <ol>
+                    <li><strong>Abre la Página de Trazabilidad:</strong> Navega a la sección <a href="panel_trazabilidad.html">Trazabilidad Blockchain</a> del STR-A.</li>
+                    <li><strong>Conecta tu Billetera:</strong> El sistema intentará conectarse automáticamente a MetaMask (o verás un botón "Conectar Billetera"). Sigue las instrucciones de MetaMask para aprobar la conexión. Esto permite que el sitio web "vea" tu dirección pública, pero nunca tu clave privada.</li>
+                    <li><strong>Verifica tu Rol:</strong> Una vez conectado, el STR-A detectará la dirección de tu billetera. El <strong>Administrador del sistema</strong> debe asignar un rol a esta dirección según la función de tu empresa:
+                        <ul>
+                            <li><strong>Fabricante:</strong> Para registrar el "nacimiento" de nuevas piezas.</li>
+                            <li><strong>Taller MRO:</strong> Para registrar eventos de mantenimiento, reparación o inspección.</li>
+                            <li><strong>Operador/Aerolínea:</strong> Para registrar instalaciones, remociones y horas de vuelo.</li>
+                        </ul>
+                        Solo con un rol asignado podrás realizar las operaciones correspondientes.
+                    </li>
+                    <li><strong>¡Listo!</strong> Con tu billetera conectada y tu rol asignado, estarás preparado para usar la plataforma STR-A y registrar acciones de forma segura en la blockchain.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="guide-section">
+            <div class="text-content">
+                <h2>3. Secuencia de Operaciones: ¿Cómo uso el sistema según mi rol?</h2>
+                <p>A continuación, se detalla el paso a paso para las operaciones más comunes. La plataforma web está diseñada para ser intuitiva, ocultando toda la complejidad tecnológica.</p>
+
+                <h3>Rol: Fabricante (Creando el "Certificado de Nacimiento Digital")</h3>
+                <p>Tu función es dar de alta cada pieza nueva que produces, creando su registro inicial e inmutable.</p>
+                <ul>
+                    <li><strong>Accede a la Plataforma:</strong> Ingresa al sistema con tu identidad digital de Fabricante.</li>
+                    <li><strong>Ve a "Registrar Nueva Pieza":</strong> Encontrarás un formulario claro y sencillo.</li>
+                    <li><strong>Completa los Datos:</strong>
+                        <ul>
+                            <li>Número de Serie (S/N): El identificador único de la pieza.</li>
+                            <li>Número de Parte (P/N): El código del modelo de la pieza.</li>
+                            <li>Propietario Inicial: La identidad digital de la aerolínea, lessor o distribuidor al que le vendes la pieza.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Adjunta la Documentación Inicial:</strong> Sube el certificado de conformidad o aeronavegabilidad (ej. Formulario 8130-3). El sistema lo vinculará de forma segura al registro.</li>
+                    <li><strong>Confirma y Registra:</strong> Al hacer clic en "Registrar", estarás creando la primera entrada en la bitácora digital de la pieza. Este registro es permanente y certifica su origen.</li>
+                </ul>
+
+                <h3>Rol: Taller MRO u Operador (Actualizando la Bitácora de Vida)</h3>
+                <p>Tu rol es mantener el historial de la pieza actualizado con cada evento significativo que ocurra durante su vida operativa.</p>
+                <ul>
+                    <li><strong>Busca la Pieza:</strong> Usa el Número de Serie (S/N) para encontrar el componente en el sistema. Verás su historial completo hasta la fecha.</li>
+                    <li><strong>Selecciona "Actualizar Estado":</strong> Se abrirá un formulario para registrar un nuevo evento.</li>
+                    <li><strong>Describe la Acción:</strong>
+                        <ul>
+                            <li>Nuevo Estado: Sé específico. Ej: "INSTALADO", "EN REPARACIÓN", "INSPECCIÓN CUMPLIDA".</li>
+                            <li>Ubicación: Indica dónde está la pieza ahora. Ej: "Aeronave LV-XYZ", "Almacén Principal", "Taller de Motores".</li>
+                            <li>Datos Adicionales: Registra información clave como horas de vuelo, ciclos, o cualquier detalle relevante del trabajo realizado.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Adjunta Documentos:</strong> Sube los certificados del trabajo (ej. Formulario 8130-3 de reparación), órdenes de trabajo, o reportes de inspección.</li>
+                    <li><strong>Confirma y Actualiza:</strong> Al confirmar, tu "firma digital" quedará registrada en esta nueva entrada del historial. Todos los demás actores verán esta actualización al instante.</li>
+                </ul>
+
+                <h3>Rol: Propietario de la Pieza (Transfiriendo la Propiedad)</h3>
+                <p>Si necesitas vender o transferir una pieza a otra entidad, el proceso es simple y seguro.</p>
+                <ul>
+                    <li><strong>Busca la Pieza:</strong> Encuentra el componente del cual eres el propietario actual usando su Número de Serie.</li>
+                    <li><strong>Inicia la Transferencia:</strong> Selecciona la opción "Transferir Propiedad".</li>
+                    <li><strong>Designa al Nuevo Propietario:</strong> Introduce la "identidad digital" de la empresa que recibirá la pieza.</li>
+                    <li><strong>Confirma la Transferencia:</strong> Con tu firma digital, el sistema registrará oficialmente el cambio de propietario. El registro es instantáneo, claro y a prueba de disputas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="text-content">
+                <h2>4. ¿Cómo Consultar el Historial de una Pieza?</h2>
+                <p>Cualquier usuario autorizado puede buscar una pieza por su número de serie y acceder a su historial completo y cronológico. Podrás ver:</p>
+                <ul>
+                    <li>Quién la fabricó y cuándo.</li>
+                    <li>Cada instalación, remoción y reparación, incluyendo la fecha y la empresa que realizó el trabajo.</li>
+                    <li>Todos los cambios de propietario.</li>
+                    <li>Enlaces a la documentación de soporte para cada evento.</li>
+                </ul>
+                <p>Esto simplifica drásticamente las auditorías, las inspecciones de aeronavegabilidad y las transacciones de compra-venta, generando un nivel de confianza y eficiencia sin precedentes en la industria.</p>
+            </div>
+        </section>
+
+        <section class="final-paragraph section-text">
+            <p>El desarrollo de un Sistema de Trazabilidad de Repuestos Aeronáuticos basado en blockchain representa una evolución crítica para la seguridad y eficiencia del sector de la aviación en Argentina. Al aprovechar la inmutabilidad, transparencia y automatización que ofrecen los contratos inteligentes de Ethereum, el STR-A no solo asegura un cumplimiento superior de las Regulaciones Argentinas de Aviación Civil (RAAC), sino que también introduce un nivel sin precedentes de confianza, eficiencia y resistencia contra la falsificación.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./scripts/usuario.js"></script>
+</body>
+</html>

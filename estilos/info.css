@@ -1,0 +1,310 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #807d7d;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Estilos del encabezado y la navegación (MODIFICADOS) --- */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 20px; /* AÑADIDO: Padding lateral para el header */
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    /* AÑADIDO: Usar flexbox para alinear elementos dentro del header */
+    display: flex;
+    justify-content: center; /* Alinear contenido (navbar/hamburguesa) a la derecha por defecto */
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Asegura que el navbar se alinee a la derecha dentro del header */
+    align-items: center;
+    width: auto; /* Permite que el navbar tome el ancho que necesita en escritorio */
+}
+
+/* --- ESTILOS PARA ESCRITORIO (PANTALLAS GRANDES) --- */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Esto ya estaba bien para mostrar en línea */
+    gap: 15px;
+    /* justify-content: center; /* ESTO DEBE SER ELIMINADO/SOBREESCRITO para que flex-end funcione */
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* --- ESTILOS DEL LOGO GLOBAL PARA ESCRITORIO --- */
+.hero-text {
+    position: absolute; 
+    top: 30px; 
+    left: 0;
+    transform: translateX(-100%) translateX(-20px);
+    z-index: 1000;
+}
+
+.global-site-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* --- REGLAS PARA OCULTAR LA HAMBURGUESA EN ESCRITORIO (MODIFICADAS) --- */
+#hamburger-btn {
+    display: none; /* OCULTA EL BOTÓN COMPLETO EN ESCRITORIO */
+}
+
+/* Aseguramos que el menú desplegable no se vea en escritorio */
+#nav-menu {
+    display: flex; /* Muestra el menú en línea en escritorio */
+}
+
+
+/* --- NUEVOS ESTILOS PARA EL LOGO EN LA IMAGEN DE FONDO --- */
+.hero-image {
+    background-image: url('./imag/logo6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*Si el header tiene padding vertical y no un height fijo, calc(100vh - altura-header-aproximada) */
+    height: calc(100vh - 64px); /* Asume que tu header mide ~64px */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+}
+
+.hero-text h1 {
+    color: white;
+    margin-top: -260px;
+    font-size: 3em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto;
+    z-index: 100;
+    position: relative;
+}
+
+/* --- Estilos específicos para Contenido de Páginas Internas --- */
+.hero-image.page-hero .hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-image.page-hero .hero-text p {
+    font-size: 1.1em;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.8;
+}
+
+.page-content h2,
+.page-content h3 {
+    color: #0056b3;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.page-content p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.page-content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 1em;
+}
+
+.page-content ul li {
+    margin-bottom: 0.5em;
+}
+
+.section-text.final-paragraph p {
+    font-style: italic;
+    color: #555;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+body {
+    padding-bottom: 0;
+}
+.info-footer {
+    position: relative;
+    bottom: unset;
+    width: 100%;
+    margin-top: auto;
+}
+
+/**************************************************/
+/* ---         AJUSTES PARA MÓVILES         --- */
+/**************************************************/
+@media (max-width: 768px) {
+    /* Ajustes para el HEADER en móvil */
+    header {
+        justify-content: flex-end; /* Asegura que el botón de hamburguesa esté a la derecha */
+        padding: 1rem 20px; /* Mantén el padding lateral en móvil */
+    }
+
+    /* Ocultar el menú de navegación tradicional en móvil */
+    .navbar ul {
+        display: none;
+    }
+
+    /* --- ESTILO DEL BOTÓN DE HAMBURGUESA --- */
+    #hamburger-btn {
+        display: flex; /* Hacemos visible el botón */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 2000;
+        margin-right: 35px; /* Resetea cualquier margen extra que pueda haber */
+    }
+
+    .hamburger-bar {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+    }
+
+    /* --- ESTILO DEL MENÚ DESPLEGABLE (MODIFICADO) --- */
+    #nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(51, 51, 51, 0.9);
+        position: fixed;
+        top: 0;
+        right: -80%; /* Mueve el menú completamente fuera de la pantalla */
+        width: 70%;
+        max-width: 160px; /* Ajusta el ancho máximo para una mejor usabilidad */
+        height: 60vh;
+        padding-top: 80px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    #nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-menu a {
+        color: #f5e9e9;
+    }
+
+    /* --- ESTADOS ACTIVOS (CUANDO SE HACE CLIC) --- */
+    #nav-menu.menu-open {
+        right: 0;
+    }
+
+    #hamburger-btn.menu-open .hamburger-bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    #hamburger-btn.menu-open .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger-btn.menu-open .hamburger-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* --- AJUSTES DEL TEXTO EN HERO-IMAGE PARA MÓVILES --- */
+    .hero-text h1 {
+        font-size: 2em;
+        margin-top: -100px; /* Puedes ajustar este valor si el texto se superpone con el header en móvil */
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    /* --- AJUSTES DEL CONTENEDOR PRINCIPAL --- */
+    .page-content {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (ej. iPhone 5/SE) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.6em;
+    }
+    .hero-text p {
+        font-size: 0.9em;
+    }
+    #nav-menu {
+        max-width: 180px;
+    }
+}

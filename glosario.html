@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario - STR-A</title>
+    <link rel="icon" type="image/x-icon" href="./imag/favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/glosario.css"> </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button id="hamburger-btn" class="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <ul id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="usuario.html">Guía del Usuario</a></li>
+                <li><a href="convertidor.html">Generador de Hash</a></li>
+                <li><a href="panel_trazabilidad.html">Trazabilidad Blockchain</a></li>
+                <li><a href="glosario.html">Glosario</a></li> 
+                <li><a href="contacto.html">Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <!--<a href="index.html">
+            <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+        </a>
+        <h2>Glosario de Términos</h2>
+        <p class="intro-text-glosario">En esta sección encontrarás las definiciones de los términos técnicos y acrónimos utilizados en el ámbito del Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A), abarcando conceptos de Blockchain, Aviación y Regulaciones.</p>-->
+
+        <section class="glosario-section">
+            <a href="index.html">
+            <img src="./imag/LogoSTRA1.jpg" alt="Logo del Sistema" class="global-site-logo">
+            </a>
+                <h2 class="stra">Sistema de Trazabilidad de Repuestos Aeronáuticos</h2>
+                    <h2>Glosario de Términos</h2>
+                        <p class="intro-text-glosario">En esta sección encontrarás las definiciones de los términos técnicos y acrónimos utilizados en el ámbito del Sistema de Trazabilidad de Repuestos Aeronáuticos (STR-A), abarcando conceptos de Blockchain, Aviación y Regulaciones.</p>
+
+            <div class="glosario-index">
+                <h3>Índice Rápido:</h3>
+                <ul>
+                    <li><a href="#blockchain-terms">Términos Blockchain</a></li>
+                    <li><a href="#aeronautica-terms">Términos Aeronáuticos</a></li>
+                    <li><a href="#regulacion-terms">Acrónimos (ANAC, RAAC)</a></li>
+                </ul>
+            </div>
+
+            <h3 id="blockchain-terms" class="glosario-category-title">Términos Blockchain</h3>
+            <div class="glosario-category">
+                <dl>
+                    <dt>Blockchain</dt>
+                    <dd>En esencia, una blockchain es una forma distribuida y segura de registrar y verificar transacciones. Imagina un libro de contabilidad digital que se comparte entre muchas computadoras. Cada vez que ocurre una transacción, se agrega a un "bloque" de datos. Luego, este bloque se vincula al bloque anterior, creando una cadena de registros. Debido a que esta información se distribuye en muchas computadoras, es extremadamente difícil de alterar o manipular. Esto hace que blockchain sea un sistema transparente y confiable para diversas aplicaciones, desde criptomonedas como Bitcoin hasta la gestión de la cadena de suministro y el almacenamiento seguro de datos. Si bien Bitcoin es quizás la aplicación más conocida de blockchain, la tecnología en sí tiene un potencial de gran alcance en muchas industrias.
+                        Más específicamente, una cadena de bloques es un libro mayor distribuido e inmutable que registra y verifica las transacciones en una red de computadoras. Cada bloque de la cadena contiene una marca de tiempo y un enlace al bloque anterior, creando un registro cronológico de todas las transacciones. Esta estructura descentralizada mejora la seguridad y la transparencia, lo que hace que las cadenas de bloques sean adecuadas para diversas aplicaciones más allá de las criptomonedas.</dd>
+
+                    <dt>Bloque</dt>
+                    <dd>Un bloque, en el contexto de la tecnología blockchain, es esencialmente un conjunto de datos que registra transacciones recientes en la red. Imagina que es como una página en un libro de contabilidad digital. Cada bloque contiene información específica, incluyendo: <br>
+                     <strong>Transacciones:</strong> Los detalles de las transferencias de valor (como criptomonedas) que han ocurrido. <br>
+                     <strong>Marca de tiempo:</strong> Un registro de cuándo se creó el bloque. <br>
+                     <strong>Hash del bloque anterior:</strong> Un código único que conecta este bloque al bloque que le precedió en la cadena. Esto es crucial para mantener la integridad y el orden de la blockchain. <br>
+                     <strong>Hash del bloque actual:</strong> Un código único que identifica este bloque específico. <br>
+                        Una vez que un bloque se llena con transacciones y se verifica, se agrega permanentemente a la cadena de bloques, volviéndose inalterable. Esta estructura en cadena es lo que le da a la blockchain su seguridad y transparencia.</dd>
+
+                    <dt>Clave Privada</dt>
+                    <dd> Es una clave secreta (asociada a tu clave pública) generada criptográficamente. Esta clave es la que permite la total propiedad y manejo de nuestros monederos y no debe ser compartida NUNCA con nadie.</dd>
+
+                    <dt>Clave Pública</dt>
+                    <dd>La clave pública en la blockchain es un identificador único y compartible que funciona como la dirección de tu billetera digital para recibir criptomonedas. Es generada a partir de una clave privada mediante criptografía de clave asimétrica, y aunque se puede compartir libremente, es fundamental mantener la clave privada, matemáticamente vinculada a la pública, en secreto para proteger los fondos y autorizar transacciones. </dd>
+                    
+                    <dt>Cold Wallet</dt>
+                    <dd>Una "cold wallet" o billetera fría es un método de almacenamiento de criptomonedas que se caracteriza por mantener las claves privadas de los activos digitales desconectadas de Internet, ofreciendo así una seguridad superior contra ataques cibernéticos y hackeos. Estas billeteras son ideales para el almacenamiento a largo plazo de grandes cantidades de criptomonedas, ya que actúan como un "depósito seguro" para tus activos. </dd>
+                    
+                    <dt>Contrato Inteligente (Smart Contract)</dt>
+                    <dd>Programas informáticos que se ejecutan automáticamente en la blockchain cuando se cumplen ciertas condiciones predefinidas. Permiten automatizar acuerdos y procesos sin necesidad de intermediarios, garantizando su cumplimiento inmutable y transparente.</dd>
+
+                    <dt>DApp (Aplicación Descentralizada)</dt>
+                    <dd>Una DApp, o aplicación descentralizada, es una aplicación que opera en una red blockchain, aprovechando sus características de seguridad, transparencia y autonomía al distribuir el control entre múltiples participantes en lugar de una entidad centralizada. A diferencia de las aplicaciones tradicionales que se ejecutan en servidores centralizados, las DApps se basan en una red peer-to-peer (P2P) y utilizan contratos inteligentes para ejecutar funcionalidades. . El STR-A es un ejemplo de DApp.</dd>
+
+                    <dt>DeFi: Decentralized Finance </dt>
+                    <dd>Finanzas Descentralizadas. Son pequeñas piezas financieras tradicionales pero con un grado extra de transparencia y descentralización. Estas pequeñas piezas son combinables entre sí, con el fin de desarrollar todo un ecosistema de pequeñas soluciones que en su conjunto formen una gran solución para las finanzas que invaliden la necesidad de instituciones financieras centralizadas.</dd>
+                    
+                    <dt>Descentralización</dt>
+                    <dd>Característica de una red en la cual no hay jerarquía ni ente central regulador.</dd>
+                    
+                    <dt>DEX (Exchange Descentralizado)</dt>
+                    <dd>en el contexto de blockchain es una plataforma que permite a los usuarios intercambiar criptomonedas directamente entre sí, sin la necesidad de un intermediario centralizado como un banco o un exchange tradicional. Los DEX funcionan a través de contratos inteligentes y operan directamente desde la billetera del usuario, ofreciendo mayor privacidad y autonomía en las transacciones. </dd>
+
+                    <dt>ENS: Ethereum Name Service</dt>
+                    <dd>Proveedor de dominios NFT.</dd>
+
+                    <dt>EVM: Ethereum Virtual Machine</dt>
+                    <dd>Es una máquina virtual que forma parte del ecosistema blockchain de Ethereum. Permite la ejecución de programas o smart contracts con el fin de desplegar sobre dicha Blockchain una serie de funcionalidades añadidas para que los usuarios puedan utilizarlas. Es capaz de ejecutar una amplia gama de instrucciones que le permiten una gran flexibilidad a la hora de realizar distintas operaciones.</dd>
+                    
+                    <dt>Ethereum</dt>
+                    <dd>Una plataforma descentralizada de código abierto basada en blockchain que permite la creación y ejecución de contratos inteligentes y DApps. Es la red utilizada para el STR-A.</dd>
+                    
+                    <dt>Fork o Bifurcación</dt>
+                    <dd>Sucede cuando la cadena de bloques se separa en dos cadenas porque los participantes de la blockchain no llegan a un acuerdo al modificar las reglas que rigen dicha red</dd>
+                    
+                    <dt>Gas Fee</dt>
+                    <dd>En el contexto de las criptomonedas y las blockchains, las "gas fees" o tarifas de gas son las comisiones que se pagan para realizar transacciones o ejecutar contratos inteligentes en una red blockchain. Estas tarifas son necesarias para incentivar a los mineros o validadores que procesan y aseguran la red. </dd>
+                    
+                    <dt>Hash (Función Hash Criptográfica)</dt>
+                    <dd>Un algoritmo matemático que toma una entrada de cualquier tamaño y produce una cadena de caracteres alfanuméricos de longitud fija y única. Cualquier cambio mínimo en la entrada resultará en un hash completamente diferente. Se utiliza para verificar la integridad de los datos y como "huella digital" de la información.</dd>
+
+                    <dt>Hardware wallet</dt>
+                    <dd> Billeteras que son dispositivos compactos y portátiles, similares a un disco duro USB, con seguridad de grado militar para que las claves privadas nunca salgan del dispositivo</dd>
+
+                    <dt>Inmutabilidad</dt>
+                    <dd>La propiedad de que una vez que un dato o transacción se registra en la blockchain, no puede ser alterado, modificado o eliminado. Esto garantiza la integridad y autenticidad del historial.</dd>
+
+                    <dt>IoT: Internet Of Things </dt>
+                    <dd> Internet de las cosas, es la agrupación e interconexión de dispositivos y objetos a través de una red, dónde todos ellos podrían ser visibles e interaccionar.</dd>
+
+                    <dt>NFT: Non Fungible Token</dt>
+                    <dd> Token No Fungible, es una representación digital de un activo, que puede ser físico o digital, único e irrepetible, grabado en la blockchain y, gracias a ello, no pueden ser copiados ni falsificados.</dd>
+                    
+                    <dt>Nodos</dt>
+                    <dd>Computadoras que forman parte de la red blockchain. Son responsables de almacenar una copia completa de la blockchain, validar transacciones y participar en el proceso de consenso.</dd>
+
+                    <dt>Peer to peer</dt>
+                    <dd>P2P se refiere a una arquitectura de red donde las computadoras, o "pares", interactúan directamente entre sí, sin necesidad de un servidor central. En este modelo, cada computadora actúa como cliente y servidor simultáneamente, compartiendo recursos como archivos, ancho de banda y poder de procesamiento con otros pares. </dd>
+
+                    <dt>Proof of Stake</dt>
+                    <dd>Protocolo que utilizan la mayoría de blockchains para crear consenso. Se requiere depositar un cierto número de criptomonedas como reserva para participar. Cuanto mayor es el porcentaje de monedas que se tengan en stake, mayor es la probabilidad de ser elegido como nodo validador para la creación del siguiente bloque.</dd>
+                    
+                    <dt>Proof of work</dt>
+                    <dd> Es un protocolo de consenso que requiere que los participantes realicen un tipo de trabajo, el cual es difícil pero factible, para obtener una recompensa. En el caso de Bitcoin, el trabajo consiste en realizar un cómputo en el ordenador para obtener una clave. </dd>
+                    
+                    <dt>Protocolos de consenso</dt>
+                    <dd> Mecanismo dentro de una red descentralizada para que todos los ordenadores participantes operen bajo las mismas reglas.</dd>
+                    
+                    <dt>Solidity</dt>
+                    <dd>Lenguaje de programación creado en agosto de 2014 por Gavin Wood con el que se pueden programar smart contracts para la red de Ethereum. Su sintaxis es muy similar a la de lenguajes muy conocidos como Javascript.</dd>
+
+                    <dt>Standard ERC-20</dt>
+                    <dd>ERC-20 es el standard utilizado en ethereum para crear los tokens fungibles.</dd>
+
+                    <dt>Standard ERC-721</dt>
+                    <dd> Los tokens ERC-721 son contratos inteligentes escritos en el lenguaje Solidity y permiten que prácticamente cualquier dato se tokenice. Cada token es único y representa un solo activo.</dd>
+
+                    <dt>Transacción (Blockchain)</dt>
+                    <dd>Una acción registrada en la blockchain, como el envío de criptomonedas, la ejecución de un contrato inteligente o el registro de un nuevo estado de una pieza en el STR-A. Cada transacción es firmada digitalmente y se agrupa en bloques.</dd>
+
+                    <dt>Token</dt>
+                    <dd>Un token de blockchain es una unidad de valor o un activo digital que se crea y opera dentro de una red de blockchain existente, en lugar de requerir su propia blockchain. Los tokens pueden representar una amplia gama de cosas, desde activos tangibles como bienes raíces o propiedades, hasta activos intangibles como derechos de propiedad intelectual, puntos de fidelidad o acceso a plataformas y servicios. </dd>
+
+                    <dt>Wallet (Billetera Digital)</dt>
+                    <dd>Una aplicación o dispositivo que permite a los usuarios interactuar con la blockchain. Almacena las claves públicas y privadas que son necesarias para enviar y recibir transacciones (o firmar acciones) y para gestionar la identidad digital en la red. MetaMask es un ejemplo de wallet.</dd>
+                </dl>
+            </div>
+
+            <h3 id="aeronautica-terms" class="glosario-category-title">Términos Aeronáuticos</h3>
+            <div class="glosario-category">
+                <dl>
+                    <dt>Aeronavegabilidad</dt>
+                    <dd>Condición de una aeronave o componente de poder operar de forma segura y fiable, cumpliendo con todos los requisitos de diseño, fabricación y mantenimiento establecidos por las autoridades de aviación.</dd>
+
+                    <dt>Componente Aeronáutico / Repuesto Aeronáutico</dt>
+                    <dd>Cualquier pieza, parte o subsistema diseñado para ser instalado en una aeronave o motor de aeronave, esencial para su funcionamiento seguro.</dd>
+
+                    <dt>Formulario 8130-3 (FAA Form 8130-3)</dt>
+                    <dd>Un certificado de aeronavegabilidad o liberación autorizada internacionalmente reconocido, emitido por fabricantes o talleres de mantenimiento, que acompaña a las piezas de aeronave para certificar su conformidad con los requisitos de diseño y/o su condición de retorno al servicio después de un mantenimiento o reparación. En Argentina, existen equivalentes nacionales o se aceptan documentos extranjeros bajo acuerdos bilaterales.</dd>
+
+                    <dt>LLP (Life Limited Part)</dt>
+                    <dd>Pieza de Vida Limitada. Componentes críticos de una aeronave que tienen una vida útil máxima definida (en horas de vuelo, ciclos o calendario), tras la cual deben ser retirados del servicio, independientemente de su condición aparente, debido a fatiga de material u otros factores que comprometen su seguridad.</dd>
+
+                    <dt>MRO (Maintenance, Repair, and Overhaul)</dt>
+                    <dd>Organización de Mantenimiento, Reparación y Revisión (también OMA: Organización de Mantenimiento Aprobada). Empresas certificadas para realizar actividades de mantenimiento, reparación y revisión de aeronaves y sus componentes.</dd>
+
+                    <dt>Número de Parte (P/N)</dt>
+                    <dd>Un código alfanumérico que identifica un modelo específico o tipo de pieza aeronáutica.</dd>
+
+                    <dt>Número de Serie (S/N)</dt>
+                    <dd>Un identificador único asignado a cada pieza individual del mismo modelo (P/N), para distinguirla de otras piezas idénticas.</dd>
+
+                    <dt>OEM (Original Equipment Manufacturer)</dt>
+                    <dd>Fabricante de Equipo Original. La empresa que fabrica las piezas o componentes originales para las aeronaves.</dd>
+
+                    <dt>Seguridad Operacional</dt>
+                    <dd>El estado en el que el riesgo de daño a las personas o los bienes se reduce a un nivel aceptable y se mantiene en este nivel o por debajo de él, mediante un proceso continuo de identificación de peligros y gestión de riesgos.</dd>
+
+                    <dt>Trazabilidad (Aeronáutica)</dt>
+                    <dd>La capacidad de rastrear la historia, aplicación y ubicación de un componente aeronáutico a lo largo de toda su vida útil, desde su fabricación hasta su retiro, garantizando la autenticidad y el cumplimiento de su historial de servicio.</dd>
+                </dl>
+            </div>
+
+            <h3 id="regulacion-terms" class="glosario-category-title">Acrónimos (ANAC, RAAC)</h3>
+            <div class="glosario-category">
+                <dl>
+                    <dt>AD (Airworthiness Directive)</dt>
+                    <dd>Directiva de Aeronavegabilidad. Avisos emitidos por la autoridad de aviación de un país que requieren una inspección, reparación o modificación obligatoria de una aeronave o componente debido a un problema de seguridad conocido.</dd>
+                    
+                    <dt>ANAC (Administración Nacional de Aviación Civil)</dt>
+                    <dd>La autoridad de aviación civil de Argentina, responsable de la regulación, fiscalización y fomento de la actividad aeronáutica en el país. Emite y supervisa el cumplimiento de las RAAC.</dd>
+
+                    <dt>RAAC (Regulaciones Argentinas de Aviación Civil)</dt>
+                    <dd>El conjunto de normativas y requisitos emitidos por la ANAC que rigen todos los aspectos de la aviación civil en Argentina, incluyendo la aeronavegabilidad, el mantenimiento, las operaciones, las licencias del personal, etc.</dd>
+                    
+                    <dt>RAAC 43 (Mantenimiento, Reconstrucción y Alteración)</dt>
+                    <dd>Parte de las Regulaciones Argentinas de Aviación Civil que establece los requisitos generales de mantenimiento, reconstrucción y alteración de aeronaves y componentes.</dd>
+
+                    <dt>RAAC 43.110 (Requisitos de materiales, piezas y equipos de aeronavegabilidad)</dt>
+                    <dd>Subparte de la RAAC 43 que especifica las condiciones y documentación requerida para el uso de materiales, piezas y equipos en aeronaves.</dd>
+
+                    <dt>RAAC 43.305 (Registros de Mantenimiento)</dt>
+                    <dd>Subparte de la RAAC 43 que detalla los requisitos para el mantenimiento de registros de mantenimiento de aeronaves y componentes.</dd>
+
+                    <dt>RAAC 145 (Organizaciones de Mantenimiento Aprobadas)</dt>
+                    <dd>Parte de las Regulaciones Argentinas de Aviación Civil que establece los requisitos para la certificación y operación de organizaciones dedicadas al mantenimiento de aeronaves y componentes.</dd>
+
+                    <dt>RAAC 145.001 (General)</dt>
+                    <dd>Subparte general de la RAAC 145 que introduce los objetivos y el alcance de las regulaciones para las organizaciones de mantenimiento.</dd>
+                    
+                    <dt>RAAC 145.630 (Registros de Organizaciones de Mantenimiento)</dt>
+                    <dd>Subparte de la RAAC 145 que describe los requisitos para el mantenimiento de registros por parte de las Organizaciones de Mantenimiento Aprobadas.</dd>
+
+                    </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 STR-A. Desarrollado por Roberto Carriero.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/roberto-carriero/" target="_blank" aria-label="Visita mi perfil de LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/roberto_carriero1/" target="_blank" aria-label="Visita mi perfil de Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/robertocarriero" target="_blank" aria-label="Visita mi perfil de GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+    </body>
+</html>
