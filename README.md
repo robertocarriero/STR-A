@@ -43,7 +43,7 @@ El objetivo principal es combatir la falsificación de piezas, mejorar la seguri
 
 ### ⛓️ Funcionalidades del Contrato Inteligente (Blockchain)
 
-(Asumiendo un contrato básico para trazabilidad)
+
 
 * **`registerPart(serialNumber, partNumber, manufacturerName, initialOwner, initialDocHash)`:** Registra una nueva pieza en la blockchain, disponible solo para cuentas con el rol `MANUFACTURER_ROLE`.
 * **`updatePartState(serialNumber, newStatus, location, docHashes, additionalData)`:** Añade un nuevo evento al historial de una pieza existente, disponible para cuentas con los roles `MRO_ROLE` o `OPERATOR_ROLE`.
@@ -63,19 +63,6 @@ Este proyecto se construye sobre una pila tecnológica moderna y robusta:
     * **HTML5:** Para la estructura semántica del contenido web.
     * **CSS3:** Para el estilizado y diseño, incluyendo el uso de [Custom Properties (Variables CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) para una gestión de temas eficiente (modo oscuro/claro) y `@media queries` para la responsividad.
     * **JavaScript (ES6+):** Para la lógica interactiva del frontend, manipulación del DOM, gestión de eventos y la comunicación con la blockchain.
-* **Blockchain / Web3:**
-    * **Solidity:** El lenguaje de programación para desarrollar el contrato inteligente que reside en la red Ethereum.
-    * **Web3.js (v1.x):** Una librería JavaScript que permite interactuar con un nodo Ethereum, enviando transacciones, leyendo datos de contratos y escuchando eventos.
-    * **MetaMask:** Una extensión de navegador esencial que actúa como billetera Ethereum y proveedor de Web3, permitiendo a los usuarios gestionar sus cuentas y firmar transacciones.
-    * **Ethereum:** La plataforma blockchain subyacente. El contrato puede ser desplegado en una red de prueba (ej. Sepolia, Ganache) o en la red principal (mainnet) para producción.
-    * **OpenZeppelin Contracts:** Librerías de contratos inteligentes seguras y reutilizables (ej. para gestión de roles `AccessControl`), utilizadas para construir el contrato de forma más eficiente y segura.
-* **Herramientas de Desarrollo y Gestión:**
-    * **Node.js & NPM / Yarn:** Entorno de ejecución de JavaScript y gestores de paquetes para instalar dependencias de desarrollo (ej. Hardhat, Truffle, Web3.js).
-    * **Hardhat / Truffle (Opcional, pero recomendado para desarrollo de contratos):** Marcos de desarrollo para Ethereum que facilitan la compilación, despliegue, prueba y depuración de contratos inteligentes.
-    * **Git & GitHub:** Sistema de control de versiones distribuido para rastrear cambios en el código y colaborar en el proyecto.
-    * **VS Code (Recomendado):** Editor de código fuente con amplio soporte para desarrollo web y Solidity.
-
----
 
 ## 📦 Estructura del Proyecto
 
