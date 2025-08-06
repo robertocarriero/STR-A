@@ -1,7 +1,8 @@
 # 🚀 Sistema de Trazabilidad de Repuestos Aeronáuticos (STRA) Basado en Blockchain
 
-![Banner del Proyecto (Opcional)](./imag/LogoSTRA1.jpg)
-_Una solución transparente e inmutable para la gestión del ciclo de vida de componentes aeronáuticos mediante tecnología blockchain._
+<p align="center">
+    <img src="./imag/LogoSTRA1.jpg" alt="Logo STR-A" width="250" height="250">
+</p>
 
 ---
 
