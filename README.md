@@ -52,7 +52,8 @@ El objetivo principal es combatir la falsificación de piezas, mejorar la seguri
 * **`getPartHistory(serialNumber)`:** Devuelve el historial completo de eventos de una pieza, incluyendo estado, ubicación, fecha/hora, quién realizó la acción y hashes de documentos asociados.
 * **`grantRole(account, role)` / `revokeRole(account, role)`:** Funciones de administración de acceso para conceder/revocar roles a cuentas específicas, disponible solo para cuentas con el rol `ADMIN_ROLE`.
 * **Roles Basados en OpenZeppelin (Ejemplo):** Utiliza un sistema de roles para controlar quién puede ejecutar qué funciones dentro del contrato, como `ADMIN_ROLE`, `MANUFACTURER_ROLE`, `MRO_ROLE`, `OPERATOR_ROLE`.
-* **https://sepolia.etherscan.io/address/0x2D3D9D30785615CaE225045Fcc03f97919104Eed#code
+* **Smart Contract**
+* https://sepolia.etherscan.io/address/0x2D3D9D30785615CaE225045Fcc03f97919104Eed#code
 
 ---
 
